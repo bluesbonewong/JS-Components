@@ -14,7 +14,7 @@
 [预览链接](https://bluesbonewong.github.io/JS-Components/Lazyrender/Lazyrender.html)  
 [HTML+CSS源码链接](https://github.com/bluesbonewong/JS-Components/blob/master/Lazyrender/Lazyrender.html)	  
 [Javascript源码链接](https://github.com/bluesbonewong/JS-Components/blob/master/Lazyrender/Lazyrender.js)	  
-## 3.Barrel Layout组件	
+## 4.Barrel Layout组件	
 使用**jQuery库、ES6、CSS3**实现  
 [预览链接](https://bluesbonewong.github.io/JS-Components/Barrel/Barrel.html)	  
 [HTML+CSS源码链接](https://github.com/bluesbonewong/JS-Components/blob/master/Barrel/Barrel.html)	  
