@@ -3,6 +3,7 @@ let Carousel = (function () {
 		this.ct = carouselContainer
 		this.init()
 		this.bind()
+		this.autoClick()
 	}
 
 	_Carousel.prototype.init = function () {
@@ -34,6 +35,12 @@ let Carousel = (function () {
 		this.btnLeft.addEventListener('click', e => {
 			// 防止事件未完成就点击
 			if (this.stopEvent) return;
+
+			// 点击之后，清除自动轮播ID
+			if (this.intId) {
+				clearInterval(this.intId)
+			}
+
 			this.playPre()
 			this.bottomBarCount -= 1
 			if (this.bottomBarCount < 0) {
@@ -43,6 +50,12 @@ let Carousel = (function () {
 		})
 		this.btnRight.addEventListener('click', e => {
 			if (this.stopEvent) return;
+
+			// 点击之后，清除自动轮播ID
+			if (this.intId) {
+				clearInterval(this.intId)
+			}
+
 			this.playNext()
 			this.bottomBarCount += 1
 			if (this.bottomBarCount > this.carouselLis.length - 1) {
@@ -50,6 +63,19 @@ let Carousel = (function () {
 			}
 			this.setBottomBar()
 		})
+	}
+
+	_Carousel.prototype.autoClick = function () {
+		this.intId = setInterval(() => {
+			if (this.stopEvent) return;
+			console.log('hh')
+			this.playNext()
+			this.bottomBarCount += 1
+			if (this.bottomBarCount > this.carouselLis.length - 1) {
+				this.bottomBarCount = 0
+			}
+			this.setBottomBar()
+		}, 5000)
 	}
 
 	_Carousel.prototype.playPre = function () {
@@ -80,6 +106,8 @@ let Carousel = (function () {
 				}
 				// 防止事件未完成就点击
 				self.stopEvent = false
+				// 点击轮播结束后，开启自动轮播
+				self.autoClick()
 			}
 		}, 1)
 	}
@@ -112,6 +140,8 @@ let Carousel = (function () {
 				}
 				// 防止事件未完成就点击
 				self.stopEvent = false
+				// 点击轮播结束后，开启自动轮播
+				self.autoClick()
 			}
 		}, 1)
 	}
