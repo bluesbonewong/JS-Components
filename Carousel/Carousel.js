@@ -36,11 +36,6 @@ let Carousel = (function () {
 			// 防止事件未完成就点击
 			if (this.stopEvent) return;
 
-			// 点击之后，清除自动轮播ID
-			if (this.intId) {
-				clearInterval(this.intId)
-			}
-
 			this.playPre()
 			this.bottomBarCount -= 1
 			if (this.bottomBarCount < 0) {
@@ -50,11 +45,6 @@ let Carousel = (function () {
 		})
 		this.btnRight.addEventListener('click', e => {
 			if (this.stopEvent) return;
-
-			// 点击之后，清除自动轮播ID
-			if (this.intId) {
-				clearInterval(this.intId)
-			}
 
 			this.playNext()
 			this.bottomBarCount += 1
@@ -86,6 +76,12 @@ let Carousel = (function () {
 		// 	console.log(this.currentPageIndex)
 		// 	this.carousel.style.left = -this.perCarouselLiWidth * (this.currentPageIndex + 1) + 'px'
 		// }
+
+		// 点击之后，清除自动轮播ID
+		if (this.intId) {
+			clearInterval(this.intId)
+		}
+
 		this.stopEvent = true
 		let self = this
 		let n = -this.perCarouselLiWidth * (this.currentPageIndex + 1) // -1226
@@ -120,6 +116,12 @@ let Carousel = (function () {
 		// 	console.log(this.currentPageIndex)
 		// 	this.carousel.style.left = -this.perCarouselLiWidth * (this.currentPageIndex + 1) + 'px'
 		// }
+
+		// 点击之后，清除自动轮播ID
+		if (this.intId) {
+			clearInterval(this.intId)
+		}
+
 		this.stopEvent = true
 		let self = this
 		let n = -this.perCarouselLiWidth * (this.currentPageIndex + 1) // -1226
