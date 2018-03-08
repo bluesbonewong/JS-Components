@@ -19,3 +19,8 @@
 [预览链接](https://bluesbonewong.github.io/JS-Components/Barrel/Barrel.html)	  
 [HTML+CSS源码链接](https://github.com/bluesbonewong/JS-Components/blob/master/Barrel/Barrel.html)	  
 [Javascript源码链接](https://github.com/bluesbonewong/JS-Components/blob/master/Barrel/Barrel.js)	  
+## 5.GoTop组件	
+使用**原生JavaScript、ES6、CSS3**实现  
+[预览链接](https://bluesbonewong.github.io/JS-Components/GoTop/GoTop.html)	  
+[HTML+CSS源码链接](https://github.com/bluesbonewong/JS-Components/blob/master/GoTop/GoTop.html)	  
+[Javascript源码链接](https://github.com/bluesbonewong/JS-Components/blob/master/GoTop/GoTop.js)	 
