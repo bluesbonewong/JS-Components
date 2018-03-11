@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ch">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+		}
+
+		ul,
+		li {
+			margin: 0;
+			list-style: none;
+		}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		html,
+		body {
+			background: #F4F4F0;
+			height: 100%;
+		}
+
+		.header {
+			width: 100%;
+			height: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			box-sizing: border-box;
+			background: white;
+		}
+
+		.wrapper {
+			width: 900px;
+			margin: 0 auto;
+		}
+
+		.ct-waterfull {
+			position: relative;
+		}
+
+		.item {
+			position: absolute;
+			width: 280px;
+			padding: 6px;
+			margin: 10px 10px;
+			transition: all 1s;
+			border: 1px solid #dbe2e8;
+			box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, .2);
+			background: white;
+		}
+
+		.item:hover {
+			box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, .2);
+		}
+
+		.item > a > img {
+			display: block;
+			width: 100%;
+		}
+
+		.item > h4 {
+			margin: 14px 0 0 0;
+			padding-bottom: 7px;
+			border-bottom: 1px solid lightgrey;
+		}
+
+		.item > p {
+			font-size: 14px;
+			margin: 0;
+			padding-top: 7px;
+		}
+
+		#bottom-load {
+			margin: 20px auto;
+			height: 20px;
+			display: block;
+			padding: 10px 20px;
+			width: 120px;
+			background: #4EB1DF;
+			color: white;
+			font-size: 14px;
+			text-align: center;
+			border-radius: 6px;
+			transition: all .3s;
+			cursor: pointer;
+		}
+
+		#bottom-load:hover {
+			background: #4092B8;
+		}
+
+		/*这个元素的css设置是为了让js计算出item的高度*/
+		/*因为一开始，ul里没有任何的li，js自然无法计算item的高度*/
+		.item.hide {
+			display: none;
+		}
+	</style>
+	<title>Waterfall_Ajax</title>
+</head>
+<body>
+<div class="header">
+	<h1>Waterfall_Ajax 组件</h1>
+</div>
+<div class="wrapper">
+	<div class="ct-waterfull">
+		<ul id="ct-picture">
+			<li class="item hide">
+				<a href="#" class="link"><img src="http://cdn.jirengu.com/book.jirengu.com/img/8.jpg" alt="图片"></a>
+				<h4>小标题小标题小标题小标题</h4>
+				<p>士大夫撒旦法师打发手动阀速度发斯蒂芬水电费费防守打法史蒂芬的</p>
+			</li>
+			<li class="item hide"></li>
+		</ul>
+		<div id="bottom-load">加载更多</div>
+	</div>
+</div>
+</body>
+<script src="./Waterfall_Ajax.js"></script>
+<script>
+	Waterfall.init(document.querySelector('.ct-waterfull'))
+</script>
+</html>
