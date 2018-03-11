@@ -24,3 +24,8 @@
 [预览链接](https://bluesbonewong.github.io/JS-Components/GoTop/GoTop.html)	  
 [HTML+CSS源码链接](https://github.com/bluesbonewong/JS-Components/blob/master/GoTop/GoTop.html)	  
 [Javascript源码链接](https://github.com/bluesbonewong/JS-Components/blob/master/GoTop/GoTop.js)	 
+## 6.瀑布流+Ajax组件  
+[预览链接](https://bluesbonewong.github.io/JS-Components/Waterfall_Ajax/Waterfall_Ajax.html)	  
+[HTML+CSS源码链接](https://github.com/bluesbonewong/JS-Components/blob/master/Waterfall_Ajax/Waterfall_Ajax.html)	  
+[Javascript源码链接](https://github.com/bluesbonewong/JS-Components/blob/master/Waterfall_Ajax/Waterfall_Ajax.js)	 
+
