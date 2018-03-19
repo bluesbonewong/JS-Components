@@ -5,7 +5,7 @@
 	<meta name="viewport"
 	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<style>
 		* {
 			margin: 0;
@@ -127,6 +127,7 @@
 	</div>
 </div>
 </body>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="./Waterfall_Ajax.js"></script>
 <script>
 	Waterfall.init(document.querySelector('.ct-waterfull'))
